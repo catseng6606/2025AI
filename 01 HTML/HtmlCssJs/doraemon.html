@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 小叮噹 (Doraemon)</title>
+    <style>
+        body {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .doraemon {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+
+        /* Head */
+        .head {
+            width: 300px;
+            height: 300px;
+            background: #0097e6;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Face */
+        .face {
+            width: 260px;
+            height: 230px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            /* Corrected from 30px */
+        }
+
+        /* Eyes */
+        .eye {
+            width: 70px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: absolute;
+            top: -30px;
+        }
+
+        .eye.left {
+            left: 50px;
+            /* Corrected from 75px */
+        }
+
+        .eye.right {
+            right: 50px;
+            /* Corrected from 75px */
+        }
+
+        .pupil {
+            width: 14px;
+            height: 14px;
+            background: #333;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+        }
+
+        .pupil.left {
+            left: 28px;
+            /* Centered */
+        }
+
+        .pupil.right {
+            left: 28px;
+            /* Centered */
+        }
+
+        /* Nose */
+        .nose {
+            width: 40px;
+            height: 40px;
+            background: #e60000;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: absolute;
+            top: 40px;
+            left: 110px;
+            /* Corrected from 130px */
+            z-index: 1;
+        }
+
+        .nose-highlight {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        /* Mouth */
+        .mouth {
+            width: 200px;
+            height: 100px;
+            border-bottom: 3px solid #333;
+            border-radius: 0 0 100px 100px;
+            position: absolute;
+            top: 75px;
+            left: 30px;
+            /* Corrected from 50px */
+        }
+
+        .mouth-line {
+            width: 3px;
+            height: 80px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: 98px;
+        }
+
+        /* Whiskers */
+        .whisker {
+            width: 80px;
+            height: 2px;
+            background: #333;
+            position: absolute;
+            top: 80px;
+        }
+
+        .whisker.l1 {
+            left: -20px;
+            transform: rotate(20deg);
+        }
+
+        .whisker.l2 {
+            left: -25px;
+            top: 110px;
+        }
+
+        .whisker.l3 {
+            left: -20px;
+            top: 140px;
+            transform: rotate(-20deg);
+        }
+
+        .whisker.r1 {
+            right: -20px;
+            transform: rotate(-20deg);
+        }
+
+        .whisker.r2 {
+            right: -25px;
+            top: 110px;
+        }
+
+        .whisker.r3 {
+            right: -20px;
+            top: 140px;
+            transform: rotate(20deg);
+        }
+
+        /* Collar */
+        .collar {
+            width: 240px;
+            height: 20px;
+            background: #e60000;
+            border: 2px solid #333;
+            border-radius: 10px;
+            position: absolute;
+            top: 280px;
+            left: 40px;
+        }
+
+        .bell {
+            width: 40px;
+            height: 40px;
+            background: #f1c40f;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: absolute;
+            top: 10px;
+            left: 100px;
+        }
+
+        .bell-line {
+            width: 36px;
+            height: 2px;
+            background: #333;
+            position: absolute;
+            top: 12px;
+            left: 2px;
+        }
+
+        .bell-hole {
+            width: 10px;
+            height: 10px;
+            background: #333;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="https://steachs.com/archives/1558" target="_blank">很想學CSS嗎？先讓哆啦A夢教你CSS在各瀏覽器下有什麼不同吧！</a>
+    </header>
+    <main>
+        <div class="doraemon">
+            <div class="head">
+                <div class="face">
+                    <div class="eye left">
+                        <div class="pupil left"></div>
+                    </div>
+                    <div class="eye right">
+                        <div class="pupil right"></div>
+                    </div>
+                    <div class="nose">
+                        <div class="nose-highlight"></div>
+                    </div>
+                    <div class="mouth">
+                        <div class="mouth-line"></div>
+                    </div>
+                    <div class="whisker l1"></div>
+                    <div class="whisker l2"></div>
+                    <div class="whisker l3"></div>
+                    <div class="whisker r1"></div>
+                    <div class="whisker r2"></div>
+                    <div class="whisker r3"></div>
+                </div>
+            </div>
+            <div class="collar">
+                <div class="bell">
+                    <div class="bell-line"></div>
+                    <div class="bell-hole"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

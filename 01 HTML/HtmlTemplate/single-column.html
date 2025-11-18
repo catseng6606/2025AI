@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單欄式網頁樣板</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #f0a3a3; /* Light Red */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #a3f0a3; /* Light Green */
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            background-color: #a3a3f0; /* Light Blue */
+            padding: 40px 20px;
+        }
+        footer {
+            background-color: #f0f0a3; /* Light Yellow */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <h1>網站標題</h1>
+    </header>
+
+    <nav class="container">
+        <a href="#">首頁</a>
+        <a href="#">關於我們</a>
+        <a href="#">聯絡我們</a>
+    </nav>
+
+    <main class="container">
+        <h2>主要內容</h2>
+        <p>這是一個單欄式網頁樣板的範例。主要內容區域會在這裡顯示。</p>
+        <p>不同的區塊（容器）使用不同的背景顏色來區分，例如頁首、導覽列、主要內容和頁尾。</p>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2024 網站版權所有</p>
+    </footer>
+
+</body>
+</html>

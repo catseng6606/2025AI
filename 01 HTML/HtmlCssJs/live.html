@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Smiley</title>
+  <style>
+    .face {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: absolute; /* Changed to absolute for movement */
+    }
+    .eye {
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+    }
+    .left {
+      left: 50px;
+    }
+    .right {
+      right: 50px;
+    }
+    .mouth {
+      width: 100px;
+      height: 50px;
+      border: 10px solid black;
+      border-top: none;
+      border-radius: 0 0 50px 50px;
+      position: absolute;
+      bottom: 40px;
+      left: 50px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="moveButton">Move Smiley</button>
+  <div id="smiley" class="face">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <script>
+    const moveButton = document.getElementById('moveButton');
+    const smiley = document.getElementById('smiley');
+    let intervalId;
+
+    function moveSmiley() {
+      const screenWidth = window.innerWidth - smiley.offsetWidth;
+      const screenHeight = window.innerHeight - smiley.offsetHeight;
+
+      const randomX = Math.floor(Math.random() * screenWidth);
+      const randomY = Math.floor(Math.random() * screenHeight);
+
+      smiley.style.left = randomX + 'px';
+      smiley.style.top = randomY + 'px';
+    }
+
+    moveButton.addEventListener('click', () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+        moveButton.textContent = "Move Smiley";
+      } else {
+        intervalId = setInterval(moveSmiley, 500);
+        moveButton.textContent = "Stop";
+      }
+    });
+  </script>
+
+</body>
+</html>

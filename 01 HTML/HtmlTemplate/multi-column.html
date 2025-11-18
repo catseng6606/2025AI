@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多欄式版型範例</title>
+    <style>
+        body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; font-family: sans-serif; }
+        header, nav, footer { background: #eee; padding: 1rem; text-align: center; border: 1px solid #ccc; }
+        .content-wrapper { display: flex; flex: 1; }
+        main { flex: 3; padding: 1rem; border: 1px solid #ccc; }
+        aside { flex: 1; padding: 1rem; background: #f4f4f4; border: 1px solid #ccc; }
+        article { border: 1px solid #aaa; padding: 1rem; margin-bottom: 1rem; background: #e9e9e9; }
+        section { border: 1px solid #999; padding: 1rem; margin-bottom: 1rem; background: #fff; }
+        footer { margin-top: auto; }
+        address { display: block; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+    <div class="content-wrapper">
+        <main>
+            &lt;main&gt;
+            <article>
+                &lt;article&gt;
+                <section>&lt;section&gt;</section>
+                <section>&lt;section&gt;</section>
+            </article>
+            <article>
+                &lt;article&gt;
+            </article>
+        </main>
+        <aside>&lt;aside&gt;</aside>
+    </div>
+    <footer>
+        &lt;footer&gt;
+        <address>&lt;address&gt;</address>
+    </footer>
+</body>
+</html>

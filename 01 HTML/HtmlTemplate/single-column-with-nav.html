@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單欄式版型範例 (含導覽列)</title>
+    <style>
+        body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; font-family: sans-serif; }
+        header, nav, main, footer {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
+        header { background: #eee; }
+        nav { background: #e9e9e9; }
+        main { background: #f4f4f4; flex: 1; }
+        footer { background: #eee; margin-top: auto; }
+        article { border: 1px solid #aaa; padding: 1rem; margin-bottom: 1rem; background: #e0e0e0; }
+        section { border: 1px solid #999; padding: 1rem; margin-bottom: 1rem; background: #fff; }
+        address { display: block; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+    <main>
+        &lt;main&gt;
+        <article>
+            &lt;article&gt;
+            <section>&lt;section&gt;</section>
+            <section>&lt;section&gt;</section>
+        </article>
+        <article>
+            &lt;article&gt;
+        </article>
+    </main>
+    <footer>
+        &lt;footer&gt;
+        <address>&lt;address&gt;</address>
+    </footer>
+</body>
+</html>
