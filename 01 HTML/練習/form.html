@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <!-- 請幫我驗證 email 格式-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"
+        >
+        <br><br>
+        <!-- 請幫我驗證電話格式-->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required
+            pattern="\d{3}-\d{3}-\d{4}"
+            title="Please enter a phone number in the format: 123-456-7890"
+        >
+        <br><br>
+        <!-- 請幫 select   , textarea , radiobox , checkbox demo     -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea>
+        <br><br>
+        <label for="options">Options:</label>
+        <select id="options" name="options">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <br><br>
+        <label>Choose a color:</label>
+        <input type="radio" id="red" name="color" value="red">  
+        <label for="red">Red</label>
+        <input type="radio" id="green" name="color" value="green">
+        <label for="green">Green</label>
+        <input type="radio" id="blue" name="color" value="blue">
+        <label for="blue">Blue</label>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet: table>caption+tr>th+th^tr>th+td</title>
+        <!-- 請直接幫我套用 cdn 的 jquery 和 datatables-->
+        <link
+      rel="stylesheet"
+        href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script
+      src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"   ></script>
+    <script>
+      $(document).ready(function () {
+        $("table").DataTable();
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- 我希望 table 包含 thead , tbody , tfoot -->
+   
+      <table border="1">
+        <caption>
+          Sample Table
+        </caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Row 1</th>
+            <td>Data 1</td>
+          </tr>
+          <tr>
+            <th>Row 2</th>
+            <td>Data 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Footer 1</th>
+            <td>Footer Data 1</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
