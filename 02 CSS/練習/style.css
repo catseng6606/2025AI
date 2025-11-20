@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 64px;
+}
+p {
+  color: red;
+}
+span {
+  background-color: rgb(30, 129, 210);
+  color: white;
+}

@@ -1,0 +1,214 @@
+<!-- 
+使用純 CSS 幫我美化這個待辦清單網頁
+要求：
+- 特別要美化 checkbox
+-  標題要有漸層色彩
+-  使用 flexbox 或 grid 來排版
+- using internal CSS
+-->
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待辦清單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            background-color: #333;
+            width: 100%;
+            justify-content: center;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            width: 80%;
+            margin: 20px 0;
+        }
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        section {
+            margin-bottom: 15px;
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #555;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #ff7e5f;
+            border-color: #ff7e5f;
+        }
+        input[type="checkbox"]:checked::after {
+            content: '✔';
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 4px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>待辦清單</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <main>
+        <ol>
+            <li>
+                <section>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">買菜</label>
+                    <!-- 可以在這裡加入更多細項，例如：蘋果、香蕉、蔬菜等 使用 ol li checkbox -->
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="subtask1-1">
+                            <label for="subtask1-1">蘋果</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask1-2">
+                            <label for="subtask1-2">香蕉</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask1-3">
+                            <label for="subtask1-3">蔬菜</label>
+                        </li>
+                    </ol>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">寫報告</label>
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="subtask2-1">
+                            <label for="subtask2-1">收集資料</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask2-2">
+                            <label for="subtask2-2">撰寫內容</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask2-3">
+                            <label for="subtask2-3">校對修改</label>
+                        </li>
+                    </ol>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">運動</label>
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="subtask3-1">
+                            <label for="subtask3-1">跑步</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask3-2">
+                            <label for="subtask3-2">游泳</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask3-3">
+                            <label for="subtask3-3">騎自行車</label>
+                        </li>
+                    </ol>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <input type="checkbox" id="task4">
+                    <label for="task4">閱讀書籍</label>
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="subtask4-1">
+                            <label for="subtask4-1">小說</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask4-2">
+                            <label for="subtask4-2">非小說</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask4-3">
+                            <label for="subtask4-3">雜誌</label>
+                        </li>
+                    </ol>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <input type="checkbox" id="task5">
+                    <label for="task5">學習程式設計</label>
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="subtask5-1">
+                            <label for="subtask5-1">HTML</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask5-2">
+                            <label for="subtask5-2">CSS</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="subtask5-3">
+                            <label for="subtask5-3">JavaScript</label>
+                        </li>
+                    </ol>
+                </section>
+            </li>
+        </ol>
+    </main>
+    <footer>
+        <p>版權所有 © 2024</p>
+    </footer>
+</body>
+</html>
