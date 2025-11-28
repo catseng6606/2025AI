@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Box</title>
+   <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+    </style>
+</head>
+<body>
+<div
+      style="
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 20px;
+        border: 5px solid #000;
+      "
+    >
+      <p>我是段落</p>
+    </div>
+    <div
+      style="
+        box-sizing: content-box;
+        padding: 20px;
+        margin: 20px;
+        border: 5px solid #000;
+      "
+    >
+      <p>我是段落</p>
+    </div>
+</body>
+</html>

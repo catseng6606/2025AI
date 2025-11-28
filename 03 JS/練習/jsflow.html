@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo flow and loop</title>
+</head>
+<body>
+    <script>
+        // if ... else if ... else
+        let score = 85;
+        
+        if (score >= 90) {
+            console.log("A");
+        } else if (score >= 80) {
+            console.log("B");
+        } else if (score >= 70) {
+            console.log("C");
+        } else if (score >= 60) {
+            console.log("D");
+        } else {
+            console.log("F");
+        }
+        // switch ... case
+        let day = 3;
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+            default:
+                console.log("Invalid day");
+
+        }
+        // for 迴圈
+        for (let i = 1; i <= 5; i++) {
+            console.log("For Loop i =", i);
+        }
+
+        // while 迴圈
+        let j = 1;
+        while (j <= 5) {
+            console.log("While Loop j =", j);
+            j++;
+        }
+        // foreach 迴圈
+        const fruits = ["Apple", "Banana", "Cherry"];
+        fruits.forEach(function(fruit) {
+            console.log("Fruit:", fruit);
+        });
+    </script>
+</body>
+</html>

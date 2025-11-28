@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float css</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid #000;
+            margin: 10px;
+            padding: 10px;
+        }
+        .float-left {
+            float: left;
+            background-color: lightblue;
+        }
+        .float-right {
+            float: right;
+            background-color: lightgreen;
+        }
+        .clear-both {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box float-left">1. 這是左浮動的盒子</div>
+        <div class="box float-left">2. 這是右浮動的盒子</div>
+        <div class="clear-both"></div>
+        <p>這段文字在兩個浮動盒子之後。</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function</title>
+</head>
+<body>
+    
+    <h1>
+        JS Function
+    </h1>
+
+    <script>
+/*
+建立函數
+呼叫函數
+使用參數
+使用 let 建立函數
+回傳值
+*/
+        // 建立函數
+        function showMessage() {
+            console.log("This is a message from the showMessage function.");
+        }
+
+        // 呼叫函式
+        showMessage();
+
+        // 使用參數
+        function greet(name) {
+            console.log("Hello, " + name + "!");
+        }
+        greet("Alice");
+        greet("Bob");
+        // 使用 let 建立函數
+        let add = function(x, y) {
+            return x + y;
+        };
+        console.log("Add 3 + 4 =", add(3, 4));
+        // 回傳值
+        function multiply(a, b) {
+            return a * b;
+        }
+        console.log("Multiply 3 * 4 =", multiply(3, 4));
+    </script>
+</body>
+</html>

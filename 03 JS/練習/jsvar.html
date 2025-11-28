@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 變數\常數</title>
+</head>
+<body>
+    <!--  
+數字：0、1、1.0、-1.0、1234567
+布林：true、false
+字串：”string”
+空值：null、undefined
+物件
+註解 // 與 /* */
+    -->
+
+    <script>
+        // 變數 variable
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        console.log("a =", a);
+        console.log("b =", b);
+        console.log("c =", c);
+
+        a = 15;
+        b = 25;
+        // c = 35; // 會報錯，因為 const 宣告的常數不能被重新賦值
+        console.log("a =", a);
+        console.log("b =", b);
+        console.log("c =", c);
+        // 常數 constant
+        // c = 40; // 會報錯，因為 const 宣告的常數不能被重新賦值
+        let s="Hello, JavaScript!";
+        console.log(s);
+        let isTrue = true;
+        console.log("isTrue =", isTrue);
+        let n = null;
+        console.log("n =", n);
+        let u = undefined;
+        console.log("u =", u);
+        let obj = {name: "John", age: 30};
+        console.log("obj =", obj);
+        let arr = [1, 2, 3, 4, 5];
+        console.log("arr =", arr);
+        let r = arr[2];
+        console.log("arr[2] =", r);
+        console.log("obj.name =", obj.name);
+        console.log("obj.age =", obj.age);
+
+        // 物件陣列
+        let people = [
+            {name: "Alice", age: 25},
+            {name: "Bob", age: 28},
+            {name: "Charlie", age: 22}
+        ];
+        console.log("people =", people);
+        console.log("people[1].name =", people[1].name);
+        console.log("people[1].age =", people[1].age);
+        // using foreach print all names,ages
+        people.forEach(function(person) {
+            console.log("Name: " + person.name + ", Age: " + person.age);
+        });
+        // console.log( "confirm = " , confirm("這是一個確認視窗"));
+    </script>
+</body>
+</html>
