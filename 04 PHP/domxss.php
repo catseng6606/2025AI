@@ -1,0 +1,22 @@
+<?php
+    // 請準備 dom-based XSS 範例讓我了解 XSS 安全與不安全的寫法
+    // dom-based XSS 範例：透過修改 window.location.hash 來觸發 XSS
+    // 透過 form 到 domxss.php 配合 href 或 img src 來觸發 XSS
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $input = $_POST['input'];
+        // 安全寫法
+        $safe_input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+        echo "Safe Output: <a href=\"$safe_input\">Link</a><br>";
+        echo "Safe Output: <img src=\"$safe_input\" onerror=\"$safe_input\" alt=\"Image\"><br>";
+        // 不安全寫法
+        echo "Unsafe Output: <a href=\"$input\">Link</a><br>";
+        echo "Unsafe Output: <img src=\"$input\"  onerror=\"$input\" alt=\"Image\"><br>";
+        // 新增一個按鈕點選後觸發不安全的 window.location.hash 觸發 XSS     
+    } else {
+        echo '<form method="post" action="">
+                Input: <input type="text" name="input">
+                <input type="submit" value="Submit">        
+            </form>';
+    }
+echo '<button onclick="testXSS()">Click me to trigger XSS</button>';   
+?>
