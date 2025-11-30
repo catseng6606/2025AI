@@ -1,0 +1,1 @@
+from vulfocus/xss-labs:latest
