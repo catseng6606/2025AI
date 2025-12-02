@@ -14,6 +14,7 @@ confirm("完成的不错！");
 <h1 align=center>欢迎来到level8</h1>
 <?php 
 ini_set("display_errors", 0);
+// &X#34;javascript:alert(1)&#34;
 $str = strtolower($_GET["keyword"]);
 $str2=str_replace("script","scr_ipt",$str);
 $str3=str_replace("on","o_n",$str2);

@@ -15,6 +15,7 @@ confirm("完成的不错！");
 <?php 
 ini_set("display_errors", 0);
 $str = $_GET["keyword"];
+// $str = '" /> <script>alert(1)</script> 
 echo "<h2 align=center>没有找到和".htmlspecialchars($str)."相关的结果.</h2>".'<center>
 <form action=level2.php method=GET>
 <input name=keyword  value="'.$str.'">

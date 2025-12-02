@@ -15,6 +15,7 @@ confirm("完成的不错！");
 <?php 
 ini_set("display_errors", 0);
 $str = $_GET["keyword"];
+// $str = "' onfocus=alert(1) autofocus='";
 echo "<h2 align=center>没有找到和".htmlspecialchars($str)."相关的结果.</h2>"."<center>
 <form action=level3.php method=GET>
 <input name=keyword  value='".htmlspecialchars($str)."'>	

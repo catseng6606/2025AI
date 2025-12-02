@@ -15,6 +15,7 @@ confirm("完成的不错！");
 <?php 
 ini_set("display_errors", 0);
 $str = $_GET["name"];
+// $str = <script>alert(1)</script>
 echo "<h2 align=center>欢迎用户".$str."</h2>";
 ?>
 <center><img src=level1.png></center>

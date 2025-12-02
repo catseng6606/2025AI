@@ -15,6 +15,7 @@ confirm("完成的不错！");
 <?php 
 ini_set("display_errors", 0);
 $str = $_GET["keyword"];
+// Href="javascript:alert(1)"
 $str2=str_replace("<script","<scr_ipt",$str);
 $str3=str_replace("on","o_n",$str2);
 $str4=str_replace("src","sr_c",$str3);
