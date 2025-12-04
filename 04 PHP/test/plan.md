@@ -1,50 +1,47 @@
-# 使用者 Profile 系統開發計畫
+# 網站基礎技術與安全作業計畫
 
 ## 目標
-建立一個無資料庫、以 Session 儲存資料的使用者 Profile 系統，包含 Profile 修改與呈現頁面，並具備基本 XSS/CSRF 防護。
+- 實作一個無資料庫、以 Session 儲存的使用者 Profile 系統，包含修改與呈現頁面，並具備基本 XSS/CSRF 防護。
 
-## 需求摘要
-- Profile 修改頁面 (edit.php)
-- Profile 呈現頁面 (profile.php)
-- .env 設定 UPLOAD_DIR
-- Session 儲存使用者資料
-- CSRF token 防護
-- 前後端一致驗證
-- XSS/CSRF 防護 (CSP, HttpOnly, Secure, SameSite)
-- Bootstrap 5 粉色系單欄布局
+## 需求拆解
+1. Profile 修改頁面 (edit.php)
+    - 表單欄位：
+        - 使用者ID (英數字)
+        - 使用者名稱 (英文字母、空白、UTF-8中文)
+        - 出生年 (1900-2100)
+        - 性別 (生理男/生理女/其他)
+        - 照片 (圖片格式驗證)
+        - IG/FB (正則驗證)
+        - 自我介紹 (可清洗)
+        - CSRF token (hidden)
+    - 驗證：前後端一致，防止 XSS/CSRF
+    - 上傳圖片存放於 UPLOAD_DIR
+    - 成功後導向 profile.php
 
-## 頁面設計
-### edit.php
-- 使用者ID (input, 英數字)
-- 使用者名稱 (input, 英文/空白/中文)
-- 出生年 (input, 1900-2100)
-- 性別 (select, 男/女/其他)
-- 照片 (input file, 圖片格式驗證)
-- IG/FB (input, 正則驗證)
-- 自我介紹 (textarea, 清洗)
-- CSRF token (hidden)
-- 提交按鈕
+2. Profile 呈現頁面 (profile.php)
+    - 顯示所有欄位內容
+    - 輸出時使用 htmlspecialchars(ENT_QUOTES)
+    - 防範偽協議、onerror/onload/onfocus 等 XSS
+    - 提供返回/編輯按鈕
 
-### profile.php
-- 呈現所有欄位，防範 XSS/CSRF
+3. .env 設定
+    - 設定 UPLOAD_DIR 供圖片上傳
 
-## 安全設計
-- htmlspecialchars(ENT_QUOTES) 輸出
-- CSP, HttpOnly, Secure, SameSite, Session
-- 前後端驗證一致
-- 防偽協議、onerror/onload/onfocus 等事件
+4. 版面設計
+    - Bootstrap 5 單欄粉色系
+    - header: h1
+    - main: form
+    - footer: copyright
 
-## 版面設計
-- Bootstrap 5 單欄粉色系
-- header: h1
-- main: form
-- footer: p
+5. 安全性
+    - CSP、HttpOnly、Secure、SameSite、Session
+    - 前後端驗證一致
+    - 圖片格式驗證
+    - CSRF token 驗證
 
-## 檔案結構
-- edit.php
-- profile.php
-- .env
-- /uploads (上傳目錄)
-
-## 測試
-- 手動測試流程與建議
+## 進度規劃
+1. 撰寫 plan.md、task.md
+2. 建立 .env 設定 UPLOAD_DIR
+3. 開發 edit.php
+4. 開發 profile.php
+5. 測試與驗證
