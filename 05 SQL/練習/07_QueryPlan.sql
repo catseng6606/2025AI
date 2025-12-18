@@ -1,0 +1,2 @@
+-- EXPLAIN QUERY PLAN
+-- 用來分析 SQL 查詢的執行計劃，幫助優化查詢性能。

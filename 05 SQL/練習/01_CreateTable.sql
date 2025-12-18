@@ -1,3 +1,5 @@
+-- Create Table 練習
+
 -- 1. 建立使用者表 (users)
 
 -- 2. 更改使用者表，新增 email 欄位
