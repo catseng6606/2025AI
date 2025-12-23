@@ -16,3 +16,15 @@ CREATE INDEX idx_age_desc ON users(age DESC);
 
 
 CREATE INDEX idx_courses_coursename ON Courses(CourseName)
+
+
+-- movies.db
+EXPLAIN QUERY PLAN
+SELECT d.name, COUNT(m.id)
+FROM directors d
+JOIN movies m ON d.id = m.director_id
+GROUP BY d.id;
+
+CREATE INDEX idx_movies_director ON movies(director_id);
+-- 移除索引的指令
+DROP INDEX idx_movies_director;
