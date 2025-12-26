@@ -15,7 +15,7 @@ DONE.md
 Thumbs.db
 
 .env
-05 SQL/imdb.db
+05 SQL/imdb.*
 05 SQL/movie.sqlite
 05 SQL/northwind.db
 05 SQL/downloads/name.basics.tsv.gz
