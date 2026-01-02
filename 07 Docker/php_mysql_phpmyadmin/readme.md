@@ -3,6 +3,8 @@
 1. 安裝 docker 與 docker compose
 2. 複製 env.example 為 .env (加入 .gitignore 不會上傳 .env)
 3. 執行 docker compose up -d
+4. 進入 phpmyadmin
+5. 進入 my_database 匯入 db.sql
 
 ## 進入 mysql
 
